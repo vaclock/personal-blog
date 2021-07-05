@@ -1,4 +1,4 @@
-# iconcomponents
+
 
 ## Project setup
 ```
