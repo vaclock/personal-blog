@@ -1,0 +1,31 @@
+@import "~@/styles/var.less";
+@import "~@/styles/mixin.less";
+.message{
+    .self-center();
+    display:flex;
+    background-color: @primary;
+    align-items:center;
+    justify-content:center;
+    padding:8px 20px;
+    border-radius:10px;
+    color:#fff;
+    opacity:0;
+    transition:0.5s;
+    transform:translate(-50%, -50%) translatey(20px);
+    &-info{
+        background-color:@primary;
+    }
+    &-warn{
+        background-color:@warn;
+    }
+    &-success{
+        background-color:@success;
+    }
+    &-error{
+        background-color:@danger
+    }
+}
+.icon{
+    font-size:20px;
+    margin-right:10px;
+}
