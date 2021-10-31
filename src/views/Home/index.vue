@@ -50,7 +50,7 @@ export default {
     CarouselItem,
     Icon,
   },
-  mixins: [fetchData],
+  mixins: [fetchData()],
   data() {
     return {
       index: 0, //当前显示的banner索引，默认为0

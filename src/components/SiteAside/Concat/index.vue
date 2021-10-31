@@ -9,7 +9,7 @@
     <li class="item">
       <a href="mailto:lee.ownclock@gmail.com">
         <Icon type="mail" />
-        <span>lee.ownclock@gmail.com</span>
+        <span>1994166883@qq.com</span>
       </a>
     </li>
 
@@ -55,13 +55,19 @@ export default {
 }
 
 .concat-container {
+  
   width: 100%;
   padding: 20px;
+  box-sizing:border-box;
   li.item {
+    a{
+      font-size:14px;
+    }
     color: @gray;
     height: 30px;
     line-height: 30px;
     margin: 14px 0px;
+    
     position: relative;
     cursor: pointer;
 
@@ -92,6 +98,7 @@ export default {
     }
     a {
       display: flex;
+      flex:0 0 auto;
       height: 30px;
       line-height: 30px;
       &:hover {

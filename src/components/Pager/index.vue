@@ -4,6 +4,7 @@
       :class="{
         disabled: currentPage === 1,
       }"
+      class="firstArrow"
       @click="handlePage(1)"
       >|&lt;&lt;</a
     >
@@ -64,7 +65,6 @@ export default {
 
   computed: {
     totalPage() {
-      console.log(Math.ceil(this.total / this.limit))
       return Math.ceil(this.total / this.limit);
     },
 
@@ -118,7 +118,12 @@ export default {
   display: flex;
   justify-content: center;
   margin: 20px auto;
+  padding: 0px 40px;
+  flex: 0 0 auto;
   a {
+    &.firstArrow{
+      min-width: 30px;
+    }
     margin: 0px 6px;
     color: @primary;
     cursor: pointer;

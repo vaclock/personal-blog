@@ -4,7 +4,14 @@
       <span :class="{ active: item.isSelected }" @click="handlerClick(item)">{{
         item.name
       }}</span>
-      <RightList :list="item.children" @select="handlerClick" />
+      <span v-if="item.aside" class="aside" :class="{ active: item.isSelected }" @click="handlerClick(item)">{{
+        item.aside
+      }}</span>
+      <RightList
+        v-if="item.children"
+        :list="item.children"
+        @select="handlerClick"
+      />
     </li>
   </ul>
 </template>
@@ -35,6 +42,20 @@ export default {
   .active {
     cursor: pointer;
     color: @warn;
+  }
+  li {
+    min-height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    span {
+      cursor: pointer;
+      &.aside{
+        margin-left: 1em;
+      }
+      &.active {
+        font-weight: bold;
+      }
+    }
   }
   .right-list-container {
     margin-left: 1em;

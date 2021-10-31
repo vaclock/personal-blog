@@ -2,7 +2,7 @@
   <div class="app-container">
     <Layout>
       <template v-slot:left>
-        <div class="left">
+        <div class="aside">
           <SiteAside />
         </div>
       </template>
@@ -31,11 +31,11 @@ export default {
 .app-container{
   .self-fill(fixed);
 }
-.left {
-  width: 300px;
-  height: 100vh;
-}
-.main{
+.aside{
+  width: 250px;
   height:100%;
+}
+.main {
+  height: 100%;
 }
 </style>

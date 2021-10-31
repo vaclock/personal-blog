@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import App from './App.vue';
-import router from "./router/index";
+
+// 导入路由
+import router from "./router";
+
 import "./mock";
 import showMessage from './utils/showMessage';
 
@@ -16,13 +19,19 @@ new Vue({
   render: h => h(App),
 }).$mount('#app')
 
+// import eventBus from "./eventBus";
 
-// just test
-import * as blogApi from "./api/blog";
-blogApi.getBlogs(10, 30, '分类1').then(p => {
-  console.log(p);
-});
+// window.eventBus = eventBus;
+// function handle1() {
+//   console.log('event1被触发了');
+// }
 
-blogApi.getBlogtype().then(p => {
-  console.log(p);
-})
+// function handle2() {
+//   console.log('event2被触发了');
+// }
+
+// window.handle1 = handle1;
+// window.handle2 = handle2;
+// eventBus.$on('event1', handle1)
+
+// eventBus.$on('event2', handle2)

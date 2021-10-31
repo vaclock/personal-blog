@@ -33,6 +33,7 @@ function showMessage({ content, type = "info", duration = 2000, callback, contai
         }, {
             once: true
         })
+        callback();
     }, duration);
 }
 export default showMessage;

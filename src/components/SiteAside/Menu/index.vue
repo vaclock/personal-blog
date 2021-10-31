@@ -24,7 +24,7 @@ export default {
     return {
       types: [
         { icon: "home", content: "首页", link: {name:'home'} },
-        { icon: "blog", content: "文章", link: {name:'blog'}, exact: false },
+        { icon: "blog", content: "文章", link: {name:'article'}, exact: false },
         { icon: "about", content: "关于我", link: {name:'about'} },
         { icon: "code", content: "项目&效果", link: {name:'project'} },
         { icon: "chat", content: "留言板", link: {name:'message'} },
@@ -45,7 +45,7 @@ export default {
 .menu-container {
   width: 100%;
   background-color: transparent;
-  padding: 24px 0px;
+  margin: 24px 0px;
   .item {
     padding: 0px 50px;
     display: block;
